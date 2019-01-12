@@ -7,13 +7,13 @@
 	 
 
 	$app->get('/',function() {
-		echo "Olá seja bem vindo";
+	    echo "Olá seja bem vindo";
 		
 	}); 
 
 	$app->get('/listar', function () {
 	    
-		$pessoadao = new PessoaDao(); 
+	    $pessoadao = new PessoaDao(); 
 	    $result = $pessoadao->listar(); 
 
         print_r(json_encode($result)); 
