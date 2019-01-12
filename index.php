@@ -20,9 +20,6 @@
 
 	});
 
-	$app->post('/salvar', function () {
-	    echo "Executei o metodo post";
-	});
 
 	$app->run();
  ?>
