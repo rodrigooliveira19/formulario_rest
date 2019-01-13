@@ -7,7 +7,12 @@
     $tel = $_POST['telefone'];
     $email = $_POST['email'];
 
-    $conn = new PDO("mysql:dbname=cadastro;host=localhost","root","123456");
+    try {
+    	$conn = new PDO("mysql:dbname=cadastro;host=localhost","root","123456");
+    } catch (Exception $e) {
+    	echo "Erro de conexão com o Banco";
+    	
+    }
 
 	if(isset($_POST['salvar'])){
         $stmt = $conn->prepare("insert into pessoa(nome,nascimento,rg,cpf,telefone,email)
