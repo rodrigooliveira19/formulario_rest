@@ -13,13 +13,12 @@
 		echo "<h3>rodrigoform.dx.am ou rodrigoform.dx.am/index.php, vocé acessará o arquivo Rest. <br/>"; 
 		echo "rodrigoform.dx.am/listar, acessa o caminho do Rest para listar os dados do Banco.<br/>"; 
 		echo "rodrigoform.dx.am/cadastro.php, acessa a aplicação que cadastra e lista os dados do Banco</h3>"; 
-
 		
 	}); 
 
 	$app->get('/listar', function () {
 	    
-		$pessoadao = new PessoaDao(); 
+	    $pessoadao = new PessoaDao(); 
 	    $result = $pessoadao->listar(); 
 
         print_r(json_encode($result)); 

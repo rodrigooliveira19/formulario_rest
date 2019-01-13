@@ -1,6 +1,6 @@
 <?php 
-
-	$nome = $_POST['nome']; 
+	
+    $nome = $_POST['nome']; 
     $nasc = $_POST['dtNascimento'];
     $rg = $_POST['rg'];
     $cpf = $_POST['cpf'];
